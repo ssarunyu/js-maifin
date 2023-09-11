@@ -5,7 +5,7 @@ This repo code is for INT201(Client side) week 1-6 contact me if some code is wr
 
 Now update : Have only array medthods
 
-Contact me : [Instagram](https://www.instagram.com/sarxnyu/), [Discord](https://discordapp.com/channels/335704331905138689/)
+Contact me : [Instagram](https://www.instagram.com/sarxnyu/)
 
 ```
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
