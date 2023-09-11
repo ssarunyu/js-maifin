@@ -35,15 +35,15 @@ const exampleArr = ["one", "two", "three", "four", "five", "iloveyou"]
 // splice
 // splice form = .splice(startIndex, removeCount, addValue, ..addValueInfinity)
 // splice startIndex start from itself
-exampleArr.splice(0, 3)
+exampleArr.splice(0, 2)
 // Expect output should start from 0 ["one"] remove 3 items from index 0
 // Array should change to ["four", "five, "iloveyou"]
 console.log(exampleArr)
 
 const exampleArrToAddWithSplice = ["one", "two", "three", "four", "five", "iloveyou"]
 // Add with splice
-exampleArrToAddWithSplice.splice(1, 2, "hi", "js")
-// 16 line mean start from index 1, remove 2 items and add "hi" to array
+exampleArrToAddWithSplice.splice(2, 3, "hi", "fsidjids", "esofihsoie")
+// 45 line mean start from index 1, remove 2 items and add "hi" to array
 // Array should be [ 'one', 'hi', 'js', 'four', 'five', 'iloveyou' ]
 console.log(exampleArrToAddWithSplice)
 

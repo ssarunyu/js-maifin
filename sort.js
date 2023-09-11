@@ -29,15 +29,19 @@
 // ░░░░▀█████░▀█████▀░▀█████░██▒▒▒▒██▄░░░░
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// TITLE : slice
-// ** Important notes ** : method returns selected elements in an array, as a new array.
-// It's mean we NEED to defind new varriable to show correct output
-// slice means only keep that items
-// slice form = .slice(startFrom, whereYouNeedToStop)
-const sliceArr = ["one", "two", "three", "four", "five", "iloveyou"]
-sliceArr.slice(1, 3)
-let a = sliceArr.slice(1, 3)
-// Expect output = [ 'two', 'three' ]
-console.log(a)
-// exampleArr[] will be the same even we use slice method for sliceArr
-console.log(sliceArr)
+// TITLE : SORT
+
+// W3school explain
+// Method sort() sorts an array alphabetically
+// By default, the sort() function sorts values as strings.
+// This works well for strings ("Apple" comes before "Banana").
+// However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+// Because of this, the sort() method will produce incorrect result when sorting numbers.
+const sortArr = ["a", "c", "b", "e", "d"]
+sortArr.sort()
+console.log(sortArr)
+
+const sortArrNum = [2, 1, 5, 200]
+sortArrNum.sort()
+// Because at 200 and 5, first index 5 > 2 so array = [ 1, 2, 200, 5 ]
+console.log(sortArrNum)
