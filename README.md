@@ -1,8 +1,5 @@
 # Javascript practice and explain
 
-This repo code is for INT201(Client side) week 1-6 contact me if some code is wrong
-
-
 Now update : Have only array medthods
 
 Contact me : [Instagram](https://www.instagram.com/sarxnyu/)
