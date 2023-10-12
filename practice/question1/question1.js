@@ -4,7 +4,7 @@
 // Add your code here
 // **npm test to submit result**
 
-let array = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
+// Example input = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
 function myArrayReturn(a) {
     // Convert the string into an array, removing the + characters in the process.
     // return variable name myArray
