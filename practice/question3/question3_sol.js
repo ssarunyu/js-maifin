@@ -9,7 +9,7 @@ function driveMonaco(fx) {
     const driversInMonaco = fx
     .filter(r => r.track.includes('Monaco'))
     .map(r => r.name);
-    return (driversInMonaco)
+    return driversInMonaco
 }
 
 // 3.3
