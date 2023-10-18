@@ -59,6 +59,7 @@ const testfindIndexTodo = todoManagement.findIndexTodo(1)
 const testRemoveTodo = todoManagement.removeTodo(1)
 // GET TODOS (return todos array)
 const testGetTodos = todoManagement.getTodos()
+
 console.log('addOne',addOne)
 console.log('addTwo',addTwo)
 console.log('addThree',addThree)
