@@ -47,19 +47,26 @@ class TodoManagement {
 
 const a = new Todo(1, 'hi')
 const todoManagement = new TodoManagement()
-// ADD
-todoManagement.addTodo('task 1')
-todoManagement.addTodo('task 2')
-todoManagement.addTodo('task 3')
-// FIND
+// ADD (return new length of array)
+const addOne = todoManagement.addTodo('task 1')
+const addTwo = todoManagement.addTodo('task 2')
+const addThree = todoManagement.addTodo('task 3')
+// FIND (return objects)
 const testFind = todoManagement.findTodo(1)
-// FIND INDEX
+// FIND INDEX (return index)
 const testfindIndexTodo = todoManagement.findIndexTodo(1)
 // REMOVE
 const testRemoveTodo = todoManagement.removeTodo(1)
-// GET TODOS
+// GET TODOS (return todos array)
 const testGetTodos = todoManagement.getTodos()
+console.log('addOne',addOne)
+console.log('addTwo',addTwo)
+console.log('addThree',addThree)
+
 console.log('testFind',testFind)
+
 console.log('testfindIndexTodo',testfindIndexTodo)
+
 console.log('testRemoveTodo',testRemoveTodo)
+
 console.log('testGetTodos',testGetTodos)
