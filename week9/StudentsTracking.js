@@ -33,13 +33,29 @@ const attendancePercents = students.map(student => {
     // Count the attendance
     const attenceCount = att.filter(Boolean).length
     const attendancePercent = (attenceCount / att.length) * 100
-    // console.log(attendancePercent)
-    console.log({name: student.name, AttendancePercentage: attendancePercent})
+    console.log(`[Avg attendance] ${student.name} : ${attendancePercent}`)
+    return attendancePercent
 })
 
 // 1.2 testScores avg
 const averageScores = students.map(student => {
-    const totalScore = student.testScores.reduce((a, b) => a + b, 0);
-    const averageScore = totalScore / student.testScores.length;
-    console.log({ name: student.name, averageScore: averageScore })
+    const totalScore = student.testScores.reduce((a, b) => a + b, 0)
+    const averageScore = totalScore / student.testScores.length
+    console.log(`[Avg scores] ${student.name} : ${averageScore}`)
+    return averageScore
 })
+
+function underPerformStudents(students) {
+  const resultUnderPerform = students
+      .map((student, index) => ({
+          name: student.name,
+          attendancePercent: attendancePercents[index],
+          averageScore: averageScores[index]
+      }))
+      // attendancePercent, averageScore check from the line 52, 53 but you need to return variable above at line 37, 45
+      .filter(student => student.attendancePercent < 80 || student.averageScore < 70)
+
+  return resultUnderPerform
+}
+
+console.log(underPerformStudents(students))
