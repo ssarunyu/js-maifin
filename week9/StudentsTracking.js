@@ -27,35 +27,31 @@ const students = [
 ]
 
 // 1.1 Attendance Percentage
-const attendancePercents = students.map(student => {
-    const att = student.attendance
-    // Filter always return TRUE values
-    // Count the attendance
-    const attenceCount = att.filter(Boolean).length
-    const attendancePercent = (attenceCount / att.length) * 100
-    console.log(`[Avg attendance] ${student.name} : ${attendancePercent}`)
-    return attendancePercent
-})
+function getAttendenceRate(student) {
+  const pDay = student.filter(Boolean).length
+  const attendenceRate = (pDay / student.length) * 100
+  return attendenceRate
+}
+console.log('getAttendenceRate', getAttendenceRate(students[0].attendance))
 
 // 1.2 testScores avg
-const averageScores = students.map(student => {
-    const totalScore = student.testScores.reduce((a, b) => a + b, 0)
-    const averageScore = totalScore / student.testScores.length
-    console.log(`[Avg scores] ${student.name} : ${averageScore}`)
-    return averageScore
-})
+function getAvgScore({ testScores }) {
+  const sumScore = testScores.reduce((total, score) => total + score, 0)
+  return sumScore / testScores.length
+}
+console.log('getAvgScore', getAvgScore(students[1]))
 
 function underPerformStudents(students) {
-  const resultUnderPerform = students
-      .map((student, index) => ({
-          name: student.name,
-          attendancePercent: attendancePercents[index],
-          averageScore: averageScores[index]
-      }))
-      // attendancePercent, averageScore check from the line 52, 53 but you need to return variable above at line 37, 45
-      .filter(student => student.attendancePercent < 80 || student.averageScore < 70)
-
-  return resultUnderPerform
+  const underPerform = students.filter((student) =>
+      getAttendenceRate(student.attendance) < 80 && getAvgScore(student) < 70
+  )
+  const pass = underPerform.map((obj) => {
+    return {
+      Name: obj.name,
+      attendanceRate: getAttendenceRate(obj.attendance),
+      avgScore: getAvgScore(obj)
+    }
+  })
+  return pass
 }
-
 console.log(underPerformStudents(students))
