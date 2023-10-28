@@ -34,6 +34,6 @@ class Person {
     }
 }
 const p1 = new Person("Sarunyu", "Supokhai", new Date(2004, 6, 23))
-const p2 = new Person("Paul", "Murray", new Date(2002, 5, 20))
+const p2 = new Person("Jeremy", "Zucker", new Date(2002, 5, 20))
 console.log(p1.getFullName())
 console.log(p1.getAge())

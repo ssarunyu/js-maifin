@@ -8,5 +8,5 @@ sliceArr.slice(1, 3)
 let a = sliceArr.slice(1, 3)
 // Expect output = [ 'two', 'three' ]
 console.log(a)
-// exampleArr[] will be the same even we use slice method for sliceArr
+// sliceArr will be the same even we use slice method for sliceArr
 console.log(sliceArr)

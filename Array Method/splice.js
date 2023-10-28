@@ -12,7 +12,6 @@ console.log(exampleArr)
 const exampleArrToAddWithSplice = ["one", "two", "three", "four", "five", "iloveyou"]
 // Add with splice
 exampleArrToAddWithSplice.splice(1, 2, "hi", "js")
-// 16 line mean start from index 1, remove 2 items and add "hi" to array
+// Start from index 1, remove 2 items and add "hi" to array
 // Array should be [ 'one', 'hi', 'js', 'four', 'five', 'iloveyou' ]
 console.log(exampleArrToAddWithSplice)
-

@@ -1,61 +1,51 @@
 class Todo {
-  static nextId = 1
-  constructor(description) {
-    this.id = Todo.nextId++
-    this.description = description
-  }
-  getTodo() {
-    return this
-  }
-  setDescription(newDescription) {
-    this.description = newDescription
-  }
+    static autoId = 1
+    constructor(description) {
+        this.id = Todo.autoId++
+        this.description = description
+    }
+    getTodo() {
+        return {id: this.id, description: this.description}
+    }
+    setDescription(newDescription) {
+        this.description = newDescription
+    }
 }
-function TodoManagement() {
-  let todos = []
-  function addTodo(description) {
-    const todo = new Todo(description)
-    return todos.push(todo)
-  }
-  function findTodo(searchId) {
-    // console.log(todos)
-    const result = todos.find((todo) => searchId === todo.id)
-    return result
-  }
-  function findIndexTodo(searchId) {
-    return todos.findIndex((todo) => searchId === todo.id)
-  }
-  function removeTodo(removeId) {
-    todos.splice(findIndexTodo(removeId), 1)
-    console.log('after remove todo:', todos)
-  }
-  function getTodos() {
-    return todos
-  }
-  return {
-    addTodo,
-    findTodo,
-    findIndexTodo,
-    removeTodo,
-    getTodos
-  }
+
+function todoManagement() {
+    let todos = []
+    function addTodo(desc) {
+        const newTodo = new Todo(desc)
+        return todos.push(newTodo)
+    }
+    function findTodo(searchId) {
+        return todos.find(todo => todo.id === searchId)
+    }
+    function findIndexTodo(searchId) {
+        return todos.findIndex(todo => todo.id === searchId)
+    }
+    function removeTodo(removeId) {
+        todos.splice(findIndexTodo(removeId), 1)
+    }
+    function getTodos() {
+        return todos
+    }
+
+    return {
+        addTodo,
+        getTodos,
+        findTodo,
+        findIndexTodo,
+        removeTodo
+    }
 }
-// const todo1 = new Todo('Laundry')
-// const todo2 = new Todo('Exercise')
-// console.log(todo1.getTodo())
-// console.log(todo2.getTodo())
-// todo2.setDescription('Play game')
-// console.log(todo2.getTodo())
-// const todoManagement = TodoManagement()
-// console.log(todoManagement.addTodo('Running'))
-// console.log(todoManagement.addTodo('Hello world, Goose'))
-const { addTodo, findTodo, findIndexTodo, removeTodo, getTodos } =
-  TodoManagement()
-console.log(addTodo('Devops Su Su'))
-console.log(addTodo('Frontend Su Su'))
-console.log(addTodo('hahaha'))
+
+const { addTodo, getTodos, findTodo, findIndexTodo, removeTodo } = todoManagement()
+addTodo('task1')
+console.log(addTodo('task2'))
+console.log(getTodos())
 console.log(findTodo(1))
-console.log('find index', findIndexTodo(1))
-console.log('find index', findIndexTodo(3))
+console.log(findIndexTodo(1))
 removeTodo(1)
-console.log('GET ALL TODO', getTodos())
+console.log('After remove by id', getTodos())
+
