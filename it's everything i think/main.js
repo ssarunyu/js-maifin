@@ -101,7 +101,6 @@ class ConcertTicketManagement {
 
     // Find concert by using id
     // Use join format convert to string in output
-    // Don't have return -1
     findConcertById(id) {
         const index = this.findConcertIndex(id)
         // -1 use to check a specific item or element
@@ -119,7 +118,7 @@ class ConcertTicketManagement {
     // Find concert by using artist name case-insensitive
     findConcertByArtistName(artistName) {
         return this.concertTickets.find(ct => ct.artist.toLowerCase() === artistName.toLowerCase()) ?? `Can't find this artist!`
-        // ?? call nullish coalescing operator if value undefined, null
+        // ?? call 'nullish coalescing operator' if value undefined or null
         // Result will show what after the ?? symbol
     }
 
