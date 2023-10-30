@@ -67,7 +67,7 @@ class ConcertTicketManagement {
             const pricesArr = this.concertTickets[concertIndex].prices
             // Use reduce to sum total price in prices array
             const sum = pricesArr.reduce((total, price) => total + price, 0)
-            // sum / pricesArr.length is where we calculator the average price
+            // sum / pricesArr.length is where we calculate the average price
             return `${artistName} : Average Ticket Price: ${sum / pricesArr.length}THB`
         }
         // It's optional you can return whatever you want in this i return undefined
