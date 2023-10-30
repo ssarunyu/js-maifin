@@ -92,7 +92,7 @@ class ConcertTicketManagement {
         })
     }
 
-    // Return sort of prices array what in concertTickets array
+    // Sort Prices by id return whole object
     sortPrices(id) {
         const index = this.findConcertIndex(id)
         this.concertTickets[index].prices.sort((a, b) => a - b)
