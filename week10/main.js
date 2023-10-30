@@ -2,7 +2,7 @@ function ops(n1, n2, n3) {
     console.log('Arguments length', arguments.length)
     arguments[0] = 5
     for (const x of arguments) {
-        console.log(x)
+        console.log('Loop all', x)
     }
 }
 // * Notes arguments เก็บค่าจะตัวส่งไม่ใช่ตัวรับ

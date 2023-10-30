@@ -39,7 +39,7 @@ function getAvgScore({ testScores }) {
   const sumScore = testScores.reduce((total, score) => total + score, 0)
   return sumScore / testScores.length
 }
-console.log('getAvgScore', getAvgScore(students[1]))
+console.log('getAvgScore', getAvgScore(students[0]))
 
 function underPerformStudents(students) {
   const underPerform = students.filter((student) =>
@@ -47,7 +47,7 @@ function underPerformStudents(students) {
   )
   const pass = underPerform.map((obj) => {
     return {
-      Name: obj.name,
+      name: obj.name,
       attendanceRate: getAttendenceRate(obj.attendance),
       avgScore: getAvgScore(obj)
     }
