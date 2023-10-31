@@ -33,10 +33,20 @@ const persons = [
     { id: 2, fullname: 'ann Smith' }
   ]
 //return sorted array by fullname (ascending order and ignore case)
-// asc = a-z
-const names = persons.map((name) => name.fullname.toLowerCase())
-const ans = names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-console.log(ans)
+// asc = a-z (1-10) | desc = z-a (10-1)
+const namesAsc = persons.map((name) => name.fullname.toLowerCase())
+const namesDesc = persons.map((name) => name.fullname.toLowerCase())
+const idAsc = persons.map((id) => id.id)
+const idDesc = persons.map((id) => id.id)
+const asc = namesAsc.sort((a, b) => a.localeCompare(b))
+const desc = namesDesc.sort((a, b) => b.localeCompare(a))
+const ascId = idAsc.sort((a, b) => a - b)
+const descId = idDesc.sort((a, b) => b - a)
+// const desc = namesDesc.sort().reverse()
+console.log(asc)
+console.log(desc)
+console.log(ascId)
+console.log(descId)
 
 // Other ways (but this show whole array)
 const ans2 = persons.sort((a, b) => a.fullname.toLocaleLowerCase().localeCompare(b.fullname.toLocaleLowerCase()))
