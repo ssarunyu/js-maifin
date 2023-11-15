@@ -26,7 +26,7 @@ class Movies {
     updateMovie(title, updatedDetails) {
       const findIndexByTitle = this.movies.findIndex(mv => mv.title.toLowerCase() === title.toLowerCase())
       if(findIndexByTitle !== -1) {
-        // This not need i wrong question not tell to do this💀
+        // This is not need i wrong question not tell to do this💀
         // this.movies[findIndexByTitle].title = updatedDetails.title || this.movies[findIndexByTitle].title
         this.movies[findIndexByTitle].director = updatedDetails.director || this.movies[findIndexByTitle].director
         this.movies[findIndexByTitle].year = updatedDetails.year || this.movies[findIndexByTitle].year
