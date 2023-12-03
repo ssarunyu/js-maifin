@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 35px;
+  width: 38px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: rgb(26, 222, 26);
+}
+
+.seat.occupied {
+  background-color: red;
+}
+/* 
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+} */
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+
+#submitSeat {
+  margin-top: 10px;
+  padding: .7rem 3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+#submitSeat:hover {
+  transform: scale(1.1);
+}
+
+/* Your existing CSS styles */
+
+/* Updated CSS for responsiveness */
+@media screen and (max-width: 1366px) {
+  .container {
+    margin-bottom: 10px;
+  }
+
+  .seat {
+    height: 25px;
+    width: 25px;
+    margin: 2px;
+  }
+
+  .showcase {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .showcase li {
+    margin: 0 5px;
+  }
+
+  p.text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 10px;
+  }
+
+  .seat {
+    height: 20px;
+    width: 20px;
+    margin: 2px;
+  }
+
+  .showcase {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .showcase li {
+    margin: 0 5px;
+  }
+
+  p.text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .seat {
+    height: 13px;
+    width: 13px;
+    margin: 1px;
+  }
+
+  .showcase {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .showcase li {
+    margin: 0 3px;
+  }
+
+  p.text {
+    font-size: 12px;
+  }
+}
