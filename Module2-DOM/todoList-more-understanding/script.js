@@ -103,7 +103,7 @@ function addTodo(todo) {
 
 function removeTodo(todo) {
     const findIndex = todos.indexOf(todo)
-    // > -1 = It's exist in array
+    // > -1 = It's exist in array (can use != -1, !== -1)
     if (findIndex > -1) {
         todos.splice(findIndex, 1)
     }
