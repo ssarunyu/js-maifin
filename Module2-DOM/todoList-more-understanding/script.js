@@ -7,6 +7,19 @@ const incompleteNumber = document.querySelector('#incomplete-number')
 
 let todos = []
 
+// User can enter to add
+newTaskText.addEventListener('keypress', (e) => {
+    if(e.code === "Enter") {
+        const newTodo = {
+            task: newTaskText.value,
+            doneStatus: false
+        }
+        todos.push(newTodo)
+        addTodo(newTodo)
+        newTaskText.value = ''
+    }
+})
+
 // Count incomplete todos
 function countIncompleteTodos() {
     return todos.filter(todo => !todo.doneStatus).length
