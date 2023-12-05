@@ -16,7 +16,7 @@ const addBtn = document.querySelector('#addBtn')
 
 let newtodoList
 
-function addTodoHandler() {
+const addTodoHandler = () => {
     addBtn.addEventListener('click', () => {
         const input = document.querySelector('input').value
         if (input != '') {
@@ -48,7 +48,7 @@ function addTodoHandler() {
 }
 
 // FIXME: I don't know how to do without get parameter 'event'
-function notDoneButtonHandler(event) {
+const notDoneButtonHandler = (event) => {
     event.style.backgroundColor = 'green'
     event.style.color = 'white'
     event.textContent = 'Done'
@@ -62,7 +62,7 @@ function notDoneButtonHandler(event) {
 }
 
 // TODO: Coding this!
-function removeButtonHandler() {
+const removeButtonHandler = () => {
     removeTodoItem(removeId) // from todoListUI.js
     td.removeTodo(removeId) // from todoManagement.js
 }
