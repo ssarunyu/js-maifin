@@ -1,22 +1,5 @@
-// import { todoManagement } from '../lib/todoManagement.js'
-// import { todoUserInterface } from '../UI/todoList.js'
-// const { showTodoItem, showNumberOfDone, showNumberOfNotDone, removeTodoItem } =
-//   todoUserInterface()
-// const {
-//   addTodo,
-//   removeTodo,
-//   findTodo,
-//   getTodos,
-//   getNumberOfDone,
-//   getNumberOfNotDone,
-//   setItemToDone,
-//   loadTodos,
-//   clearTodo
-// } = todoManagement()
-
-const todoManagement = require('../lib/todoManagement.js')
-const todoUserInterface = require('../UI/todoList.js')
-
+import { todoManagement } from '../lib/todoManagement.js'
+import { todoUserInterface } from '../UI/todoList.js'
 const { showTodoItem, showNumberOfDone, showNumberOfNotDone, removeTodoItem } =
   todoUserInterface()
 const {
@@ -30,6 +13,23 @@ const {
   loadTodos,
   clearTodo
 } = todoManagement()
+
+// const todoManagement = require('../lib/todoManagement.js')
+// const todoUserInterface = require('../UI/todoList.js')
+
+// const { showTodoItem, showNumberOfDone, showNumberOfNotDone, removeTodoItem } =
+//   todoUserInterface()
+// const {
+//   addTodo,
+//   removeTodo,
+//   findTodo,
+//   getTodos,
+//   getNumberOfDone,
+//   getNumberOfNotDone,
+//   setItemToDone,
+//   loadTodos,
+//   clearTodo
+// } = todoManagement()
 
 const addTodoHandler = () => {
   const todoItem = document.querySelector('input').value
@@ -111,18 +111,18 @@ const loadHandler = () => {
   })
 }
 
-// export {
-//   addTodoHandler,
-//   notDoneButtonHandler,
-//   removeButtonHandler,
-//   beforeUnloadHandler,
-//   loadHandler
-// }
-
-module.exports = {
+export {
   addTodoHandler,
   notDoneButtonHandler,
   removeButtonHandler,
   beforeUnloadHandler,
   loadHandler
 }
+
+// module.exports = {
+//   addTodoHandler,
+//   notDoneButtonHandler,
+//   removeButtonHandler,
+//   beforeUnloadHandler,
+//   loadHandler
+// }

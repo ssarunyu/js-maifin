@@ -1,5 +1,6 @@
-// import { Todo } from './todo.js'
-const Todo = require('./todo.js')
+import { Todo } from './todo.js'
+// const Todo = require('./todo.js')
+
 function todoManagement() {
   let todos = []
   function addTodo(id, desc, done) {
@@ -50,5 +51,6 @@ function todoManagement() {
     clearTodo
   }
 }
-// export { todoManagement }
-module.exports = todoManagement
+
+export { todoManagement }
+// module.exports = todoManagement

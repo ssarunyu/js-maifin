@@ -26,5 +26,5 @@ class Todo {
   }
 }
 
-// export { Todo }
-module.exports = Todo
+export { Todo }
+// module.exports = Todo
