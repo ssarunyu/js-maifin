@@ -20,9 +20,10 @@ function itemList(userItems) {
     }
 
     // Case insensitive
-    const filterItemsHandler = () => {
+    const filterItemsHandler = (e) => {
         // Get user input and change to lowercase
-        const searchInputValue = document.querySelector('input').value.toLowerCase()
+        console.log(e)
+        const searchInputValue = e.target.value.toLowerCase()
         // Track to see in console what user type
         console.log(searchInputValue)
         const filteredItems = userItems.filter((item) => {
