@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TAYLOR SWIFT 2099 LIVE IN BANGKOK</h1>
+    <input id="search-bar" placeholder="Search by name..." type="text">
+    <input id="reservation-name" placeholder="ชื่อคนซื้อบัตร..." type="text">
+    <input id="qty-input" type="number" placeholder="จำนวนคน...">
+    <button id="submit-reservation" type="submit">Buy Tickets</button>
+    <div class="concert-select-div">
+        <label for="concerts">Choose Zone (All Standing):</label>
+        <select name="concerts" id="concerts">
+          <option value="25000">ZONE VVIP (25,000฿)</option>
+          <option value="10000">ZONE VIP (10,000฿)</option>
+          <option value="7000">ZONE AL (7,000฿)</option>
+          <option value="7000">ZONE AR (7,000฿)</option>
+          <option value="4000">ZONE B (4,000฿)</option>
+          <option value="3000">ZONE C (3,000฿)</option>
+          <option value="2500">ZONE E (2,500฿)</option>
+          <option value="2000">ZONE F (2,000฿)</option>
+        </select>
+    </div>
+    <div class="alert-limit">จำนวนบัตรอาจมากเกินโปรดตรวจสอบการซื้อ</div>
+    <div class="show-reservation"></div>
+    <div class="user-amount"></div>
+    <div class="total-revenue"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
