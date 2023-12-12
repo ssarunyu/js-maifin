@@ -134,7 +134,7 @@ function addNewReservation() {
     let userQty = parseInt(qtyInput.value)
     if (remainingSpace < userQty) {
         // Alert or display a message that the limit is reached
-        // Defind in css .alert-limit.active
+        // Define in css .alert-limit.active
         alertLimitDiv.classList.add('active')
         return // Exit the function
     } else {
