@@ -28,7 +28,7 @@ getAllReservation() {
 ```
 ### addNewreservation(name, qty)
 
-เพิ่มค่าใหม่ลงใน array รับ parareter 2 ตัว ชื่อ name, qty
+เพิ่มค่าใหม่ลงใน array รับ parameter 2 ตัว ชื่อ name, qty
 สร้าง object ใหม่ ({})<br>
 กำหนด property id เป็น Reserve(ชื่อ class).autoId(เข้าถึง static)++(บวกเองทุกครั้งที่สร้างใหม่)<br>
 กำหนด property name เป็น paremeter name ที่รับค่าจาก addNewreservation<br>
@@ -50,7 +50,7 @@ addNewreservation(name, qty) {
 ```
 
 ### getIndexOfReservation(id)
-รับค่า property ชื่อ id เพื่อหา index ของ id นั้น
+รับค่า parameter ชื่อ id เพื่อหา index ของ id นั้น
 index คือตำแหน่งของค่าใน array, Javascript นับตำแหน่งแรกเป็น 0
 ตัวอย่างเช่น
 ```
