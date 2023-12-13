@@ -59,7 +59,7 @@ index ของค่า 1 ใน exampleArr คือ 0
 length ของ exampleArr คือ 5 (นับเหมือนเวลาเรานับเลข)
 ```
 สร้างตัวแปร findIndex(ชื่ออะไรก็ได้) กำหนดให้เท่ากับ this.reservations(ซึ่งคือ array ของเรา) รับ parameter ชื่อ rs(ชื่ออะไรก็ได้)
-เทียบค่า rs.id(ในที่นี้คือเรากำลังเข้าถึง this.reservations property ที่ชื่อ id ใน object นั้น ๆ) เทียบกับ id ซึ่งคือ paremeter ที่เรารับจาก getIndexOfReservation<br>
+เทียบค่า rs.id(ในที่นี้คือเรากำลังเข้าถึง this.reservations property ที่ชื่อ id ใน object นั้น ๆ) เทียบกับ id ซึ่งคือ parameter ที่เรารับจาก getIndexOfReservation<br>
 **หา index จากชื่อทำเหมือนกัน แค่เทียบ rs.name กับค่า name ที่รับมา**
 ```
 getIndexOfReservation(id) {
