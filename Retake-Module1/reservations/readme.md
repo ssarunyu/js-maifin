@@ -40,6 +40,7 @@ The push() method returns the new length.<br>
 ```
 addNewreservation(name, qty) {
   const newReservation = {
+    //Reserve เปลี่ยนตามชื่อ class เด้อ
     id: Reserve.autoId++,
     name: name,
     qty: qty
