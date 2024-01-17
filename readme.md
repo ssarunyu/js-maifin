@@ -1,4 +1,12 @@
-# Javascript for INT201
+# Status🟢
+
+Now this repo focus on INT203 (Client-Side Programming II)
+
+## Javascript for INT203
+- [Basic of Vue](https://github.com/ssarunyu/js-maifin/tree/main/basic)
+
+  
+## Javascript for INT201
 
 All of javascript in week 7-xx
 
